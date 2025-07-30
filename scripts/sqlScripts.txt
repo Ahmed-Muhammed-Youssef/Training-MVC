@@ -1,0 +1,11 @@
+INSERT INTO [dbo].[Genres] ([Name]) VALUES 
+(N'Action'),
+(N'Adventure'),
+(N'Comedy'),
+(N'Drama'),
+(N'Horror'),
+(N'Fantasy'),
+(N'Science Fiction'),
+(N'Thriller'),
+(N'Romance'),
+(N'Documentary');
