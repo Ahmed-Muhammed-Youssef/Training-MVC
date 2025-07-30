@@ -60,5 +60,15 @@ public class MovieController : Controller
         await dbContext.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
-    
+
+    public async Task<IActionResult> Details(int id)
+    {
+        var movie = await dbContext.Movies.Include(m => m.Genre).FirstOrDefaultAsync(m => m.Id == id);
+
+        if (movie == null)
+            return NotFound();
+
+        return View(movie);
+    }
+
 }
